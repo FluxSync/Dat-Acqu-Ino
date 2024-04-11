@@ -1,6 +1,5 @@
 // Importa os módulos necessários
 // não altere!
-a
 const serialport = require('serialport'); // Módulo para comunicação serial
 const express = require('express'); // Módulo para criar um servidor web
 const mysql = require('mysql2'); // Módulo para conectar ao MySQL
@@ -17,10 +16,10 @@ const HABILITAR_OPERACAO_INSERIR = false;
 
 // Função para comunicação serial
 const serial = async (
-    valoresDht11Umidade,
-    valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
+    //valoresDht11Umidade,
+    //valoresDht11Temperatura,
+    //valoresLuminosidade,
+    //valoresLm35Temperatura,
     valoresChave
 ) => {
     let poolBancoDados = ''
