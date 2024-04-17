@@ -30,17 +30,10 @@ const serial = async (
             // altere!
             // Credenciais do banco de dados
             host: 'localhost',
-<<<<<<< HEAD
             user: '',
             password: '',
             database: 'grupo_pi',
-            port: '3307'
-=======
-            user: 'flux',
-            password: 'SENHA_DO_BANCO_LOCAL',
-            database: 'DATABASE_LOCAL',
-            port: 3306
->>>>>>> cd60822734c4303364241cfe2fa5a8f03d2b86a6
+            port: '3306'
         }
     ).promise();
 
@@ -87,11 +80,7 @@ const serial = async (
             // altere!
             // Este insert irá inserir os dados na tabela "medida"
             await poolBancoDados.execute(
-<<<<<<< HEAD
                 'INSERT INTO registroSensor (statusSensor, fkSensor, horaRegistro) VALUES (?,1,CURRENT_TIMESTAMP())',
-=======
-                'INSERT INTO registroSensor (/*dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura,*/ chave) VALUES (?, ?, ?, ?, ?)',
->>>>>>> cd60822734c4303364241cfe2fa5a8f03d2b86a6
                 [/*dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura,*/ chave]
             );
             console.log("valores inseridos no banco: ", chave /* dht11Umidade + ", " + dht11Temperatura + ", " + luminosidade + ", " + lm35Temperatura*/)

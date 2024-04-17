@@ -18,7 +18,7 @@
 
 <body>
     <div>
-        <h1>Sensor DHT 11 - Umidade</h1>
+        <!-- <h1>Sensor DHT 11 - Umidade</h1> 
         <section style="width:100%">
             <canvas id="dht11Umidade"></canvas>
         </section>
@@ -33,16 +33,16 @@
         <h1>Sensor LM 35 - Temperatura</h1>
         <section style="width: 100%;">
             <canvas id="lm35Temperatura"></canvas>
-        </section>
+        </section>-->
         <h1>Sensor Chave</h1>
-        <section style="width: 100%;">
+        <section style="width: 100%; height: 100%;">
             <canvas id="chave"></canvas>
         </section>
     </div>
 
     <script>
         /* -- dht11Umidade -- */
-        var contextoDht11Umidade = document.getElementById('dht11Umidade').getContext('2d');
+        /*var contextoDht11Umidade = document.getElementById('dht11Umidade').getContext('2d');
         contextoDht11Umidade.canvas.width = 1000;
         contextoDht11Umidade.canvas.height = 300;
         var dht11Umidade = new Chart(
@@ -81,7 +81,7 @@
                 }
             }
         );
-        /* -- dht11Temperatura -- */
+        /* -- dht11Temperatura -- *//*
         var contextoDht11Temperatura = document.getElementById('dht11Temperatura').getContext('2d');
         contextoDht11Temperatura.canvas.width = 1000;
         contextoDht11Temperatura.canvas.height = 300;
@@ -121,7 +121,7 @@
                 }
             }
         );
-        /* -- luminosidade -- */
+        /* -- luminosidade -- *//*
         var contextoLuminosidade = document.getElementById('luminosidade').getContext('2d');
         contextoLuminosidade.canvas.width = 1000;
         contextoLuminosidade.canvas.height = 300;
@@ -161,7 +161,7 @@
                 }
             }
         );
-        /* -- lm35Temperatura */
+        /* -- lm35Temperatura *//*
         var contextoLm35Temperatura = document.getElementById('lm35Temperatura').getContext('2d');
         contextoLm35Temperatura.canvas.width = 1000;
         contextoLm35Temperatura.canvas.height = 300;
@@ -273,10 +273,10 @@
         }
 
         setInterval(() => {
-            obterDados(dht11Umidade, 'dht11/umidade');
-            obterDados(dht11Temperatura, 'dht11/temperatura');
-            obterDados(luminosidade, 'luminosidade');
-            obterDados(lm35Temperatura, 'lm35/temperatura');
+            // obterDados(dht11Umidade, 'dht11/umidade');
+            // obterDados(dht11Temperatura, 'dht11/temperatura');
+            // obterDados(luminosidade, 'luminosidade');
+            // obterDados(lm35Temperatura, 'lm35/temperatura');
             obterDados(chave, 'chave');
         }, 1000);
 
