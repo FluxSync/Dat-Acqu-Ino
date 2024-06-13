@@ -13,5 +13,5 @@ void loop() {
   Serial.println("0");
   }
   //delay(600000);
-  delay(2000); 
-}
+  delay(10000); 
+} 

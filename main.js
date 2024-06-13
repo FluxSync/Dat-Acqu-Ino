@@ -29,11 +29,11 @@ const serial = async (
         {
             // altere!
             // Credenciais do banco de dados
-            host: 'localhost',
-            user: '',
-            password: '',
+            host: '10.18.33.36',
+            user: 'aluno',
+            password: 'Sptech#2024',
             database: 'grupo_pi',
-            port: '3306'
+            port: '3307'
         }
     ).promise();
 
@@ -80,13 +80,13 @@ const serial = async (
             // altere!
             // Este insert irá inserir os dados na tabela "medida"
             await poolBancoDados.execute(
-                'INSERT INTO registroSensor (statusSensor, fkSensor, horaRegistro) VALUES (?,1,CURRENT_TIMESTAMP())',
+                'INSERT INTO registroSensor (fkSensor, horaRegistro, statusSensor) VALUES (1,CURRENT_TIMESTAMP(),?);',
                 [/*dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura,*/ chave]
             );
             console.log("valores inseridos no banco: ", chave /* dht11Umidade + ", " + dht11Temperatura + ", " + luminosidade + ", " + lm35Temperatura*/)
-        
+
         }
-        
+
     });
 
     // Evento para lidar com erros na comunicação serial
